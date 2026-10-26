@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#1a1b22", "surface-dim": "#d2d9f4", "inverse-primary": "#b7c4ff", "inverse-surface": "#283044", "on-secondary": "#ffffff", "surface-container": "#eeedf7", "on-primary-container": "#9baeff", "outline-variant": "#c4c5d6", "secondary-container": "#9af2c5", "tertiary-fixed-dim": "#96cfe0", "on-primary-fixed-variant": "#063ab2", "secondary-fixed-dim": "#81d8ad", "primary-fixed-dim": "#b7c4ff", "on-tertiary-container": "#75e3ff", "surface-container-high": "#e8e7f2", "surface-container-highest": "#dae2fd", "on-tertiary": "#ffffff", "surface-tint": "#2151da", "on-primary": "#ffffff", "surface-bright": "#faf8ff", "primary": "#00247d", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#064e5c", "tertiary-container": "#024c5a", "secondary-fixed": "#9df4c8", "on-surface-variant": "#444654", "surface-variant": "#e2e1ec", "primary-fixed": "#dce1ff", "on-secondary-container": "#00714d", "on-error-container": "#93000a", "primary-container": "#1d4ed8", "on-tertiary-fixed": "#001f26", "inverse-on-surface": "#eef0ff", "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f3ff", "error": "#ba1a1a", "tertiary-fixed": "#b2ecfd", "on-secondary-fixed-variant": "#005236", "outline": "#747686", "on-background": "#1a1b22", "tertiary": "#00343e", "on-secondary-fixed": "#002113", "secondary": "#006c49", "on-primary-fixed": "#001551", "error-container": "#ffdad6", "surface": "#faf8ff", "background": "#faf8ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "margin-desktop": "2rem", "gutter": "1rem", "space-sm": "0.5rem", "margin": "1rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem" }, fontFamily: { "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "16px", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-9 px-space-sm bg-primary rounded-lg flex items-center justify-center"><span class="font-display text-headline-sm text-on-primary tracking-tight font-bold">SCMS</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Sports Center</span><span class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 leading-none">Van Hanh Hoi Vien</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Thông báo" class="relative w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-error rounded-full"></span></button><button aria-label="Menu quản trị viên" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-gutter pb-space-xl space-y-space-md">
+<!-- Compact Shift Header Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Lễ tân Ca Sáng</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-secondary-container text-on-secondary-container">06:00 - 14:00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Bàn trực 02 • Nhân viên: REC-8802 (Thu Ngân)</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary">Trực tuyến</span>
+</div>
+</div>
+<!-- Smart Search & Check-in QR Bar -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-stretch gap-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-9 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm transition-all" id="memberSearchInput" placeholder="Tìm SĐT, Tên, Mã SCMS..." type="text"/>
+<button class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface p-1" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Big Action QR Scan -->
+<button class="h-11 px-space-md bg-primary-container text-on-primary rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md active:scale-95 transition-transform shadow-sm shrink-0" id="openScannerBtn">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+<span class="hidden sm:inline">Quét QR</span>
+<span class="sm:hidden font-bold">QR</span>
+</button>
+</div>
+<!-- Quick Filter Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5 -mx-1 px-1">
+<button class="filter-chip active shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary transition-colors" data-filter="all">
+        Tất cả (184)
+      </button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="checked-in">
+        Đã check-in (68)
+      </button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="expiring">
+        Sắp hết hạn (12)
+      </button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="day-pass">
+        Vé ngày (35)
+      </button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors" data-filter="vip">
+        VIP / Platinum
+      </button>
+</div>
+</div>
+<!-- Operational Metrics / KPIs -->
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Đã Check-in</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">how_to_reg</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">184</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">trending_up</span>
+<span class="font-label-sm text-label-sm text-secondary">+18%</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Có mặt sàn</span>
+<span class="material-symbols-outlined text-primary text-[16px]">fitness_center</span>
+</div>
+<div class="mt-2">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary">68</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 160</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Thu Quầy</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">payments</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">5.85M</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-0.5">14 lượt thanh toán</p>
+</div>
+</div>
+</div>
+<!-- Quick Action Grid (Tactile Touch Buttons) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Thao tác quầy tốc độ</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Phím tắt lễ tân</span>
+</div>
+<div class="grid grid-cols-5 gap-space-xs pt-1">
+<!-- Quick Action 1 -->
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all text-center" onclick="triggerQuickCheckin()">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">login</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Vào sàn</span>
+</button>
+<!-- Quick Action 2 -->
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all text-center" onclick="openNewMemberModal()">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Đăng ký mới</span>
+</button>
+<!-- Quick Action 3 -->
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all text-center" onclick="openRenewModal()">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">autorenew</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Gia hạn</span>
+</button>
+<!-- Quick Action 4 -->
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all text-center" onclick="openClassBookingModal()">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">event_seat</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Xếp lớp GX</span>
+</button>
+<!-- Quick Action 5: VietQR Payment Invoice (Subtle & balanced) -->
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all text-center" onclick="openVietQRModal()">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">Hóa đơn QR</span>
+</button>
+</div>
+</div>
+<!-- Real-Time Member Hub Cards -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Danh sách hội viên sàn</h2>
+<span class="px-2 py-0.5 bg-surface-container rounded-full font-label-sm text-label-sm text-primary font-bold" id="activeCountBadge">4 hội viên hiển thị</span>
+</div>
+<button class="flex items-center gap-1 font-label-md text-label-md text-primary" onclick="sortMemberList()">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+<span>Sắp xếp</span>
+</button>
+</div>
+<!-- Member Items Container -->
+<div class="space-y-space-sm" id="memberListContainer">
+<!-- Member 1 -->
+<div class="member-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container-low" data-category="checked-in vip" data-id="SCMS-88391" data-locker="18" data-name="Nguyễn Văn Nam" data-phone="0918 234 888" data-plan="Gói Platinum 12 tháng" data-status="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-xl object-cover bg-surface-container" data-alt="Chân dung nam hội viên thể thao trẻ trung năng động phong thái tự tin trong phòng gym cao cấp ánh sáng tự nhiên" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS0OZvEoL_eWd2J7XBbnNe2Za7P16Dll-xC2paWLX5uxAUarYb_MC_dtzr16bAcKw6qksTD7iTMGgDRUZUCoh5bN0gP5GT-fPIWE85pKIoMpKuEUcGiNkMtFHWvMW5E8vO58Q2mE9Rxo21xcir4sbyG5MWw7e7ZfUpvIe1uo3423mQETSL67hw5PVrvcze_DN6gB3StBZiuI8vnxD6UWoK_OcAelFbd0y_fjIVvhdwv_Km7_AS8nwr"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest text-on-secondary">
+<span class="material-symbols-outlined text-[10px]">done</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface member-name">Nguyễn Văn Nam</h3>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed-variant">VIP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant member-id">Mã: SCMS-88391 • SĐT: 0918 234 888</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm bg-surface-container text-on-surface member-plan">Gói Platinum 12 tháng</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="member-locker">Locker #18</span>
+</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Hợp lệ
+          </span>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vào sàn lúc: 06:42 hôm nay</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md active:scale-95 transition-all" onclick="quickCheckOut('SCMS-88391')">
+              Trả tủ
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-all" onclick="openUpdateModal('SCMS-88391')">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+              Cập nhật
+            </button>
+</div>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="member-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container-low" data-category="expiring checked-in" data-id="SCMS-29104" data-locker="04" data-name="Lê Thị Mai" data-phone="0903 552 119" data-plan="Gói Yoga Basic (Còn 3 buổi)" data-status="expiring">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-xl object-cover bg-surface-container" data-alt="Chân dung nữ hội viên yoga mỉm cười nhẹ nhàng trong studio thể thao ánh sáng rạng rỡ phong cách hiện đại" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-4uAl6U1pcdUHJLkg8ddmURbjH59YqP_8nzh_cDoIBg_5WHtmayNhkvGfRp2jWUHXhZUmWvb5wP9S-iujkWxwSqOYpVZEsxKcSy_vN0s7VByTHi-fpxTMBMfVX0HRFsW7sO-jAK_6V8HyloqQ6puV95-Vik_98tIUdveBR2q3A6Sz8-TvTHf40Q-reVxYdByXatOeNH97Nuk5luAmR6JGy1BAN9rHKZqSWY9B8112RqQXyuGIIIhK"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-tertiary-container rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest text-on-tertiary">
+<span class="material-symbols-outlined text-[10px]">self_improvement</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface member-name">Lê Thị Mai</h3>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container">Sắp hết hạn</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant member-id">Mã: SCMS-29104 • SĐT: 0903 552 119</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm bg-surface-container text-on-surface member-plan">Gói Yoga Basic (Còn 3 buổi)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="member-locker">Locker #04</span>
+</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-error-container text-on-error-container shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+            Sắp hết
+          </span>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-error font-medium">Hết hạn sau 4 ngày</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md active:scale-95 transition-all" onclick="quickRenew('SCMS-29104')">
+              Gia hạn ngay
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="openUpdateModal('SCMS-29104')">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+              Sửa
+            </button>
+</div>
+</div>
+</div>
+<!-- Member 3 -->
+<div class="member-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container-low" data-category="day-pass checked-in" data-id="DAYPASS-901" data-locker="07" data-name="Trần Quốc Bảo" data-phone="0934 991 772" data-plan="Vé ngày Gym &amp; Bể bơi" data-status="daypass">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-xl object-cover bg-surface-container" data-alt="Chân dung khách hàng nam vãng lai trong trang phục thể thao thoải mái trẻ trung tại quầy tiếp tân thể thao" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADceHhg7Ny3B7GwdDFtHmw96V3lJXd3wNnj113c-ekYBf6jcO9wmRdkrqFCNa5pSaLTQiRx6cExwOOqaUN7dIfLOKsB5YwGkMazb5xRoBWZ4jd_aBfY_c9YucL5lAbMFOb-1p7g078qWachapTau17rgLO8tUHHsorakjW3Hr5G9_z9hEoLJoTpCo2V5b6SgJMjWwPwtQdU1N7Ze0_TS46uRpY3Ye3JnYaqSGQaO3gYpPneEhtDD4v"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-surface-container-highest rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-[10px]">confirmation_number</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface member-name">Trần Quốc Bảo</h3>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant">Khách vãng lai</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant member-id">Vé ngày: #DAY-901 • SĐT: 0934 991 772</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm bg-surface-container text-on-surface member-plan">Vé 150.000đ (Gym + Pool)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="member-locker">Locker #07</span>
+</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Vé ngày
+          </span>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Đã thanh toán VietQR</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="openUpdateModal('DAYPASS-901')">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+              Cập nhật
+            </button>
+</div>
+</div>
+</div>
+<!-- Member 4 -->
+<div class="member-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container-low" data-category="vip" data-id="SCMS-99215" data-locker="32" data-name="Phạm Thùy Linh" data-phone="0988 123 456" data-plan="Gói Pilates VIP All-Access" data-status="active">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-xl object-cover bg-surface-container" data-alt="Chân dung phụ nữ thanh lịch khỏe khoắn tập pilates cao cấp ánh sáng ấm áp tự nhiên studio hiện đại" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjT-9w900TUfy1xKRMECOr58yemWOB1_qQVtztUskVEWXXpYnAEzdv0Ond5gQMqRytAhehtPJjJH3GilMAXpwL6Zl8_jH1XaNQtIMGeOM8WRPuUi5tKcrRXpMuJsIMS8a_rBy3P5CS5vTimk6wH4WvPnYa3GyFQZB0oI-bjU91JiECwy3kuWAErrgPYeQYV_L2t0UcyRhRbKsB8Asw3T-x1rSKxRLtdaiCdnlF9ZAgkjLPR9r5EiHe"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest text-on-primary">
+<span class="material-symbols-outlined text-[10px]">star</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface member-name">Phạm Thùy Linh</h3>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed-variant">VIP Pilates</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant member-id">Mã: SCMS-99215 • SĐT: 0988 123 456</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-md font-label-sm text-label-sm bg-surface-container text-on-surface member-plan">Gói Pilates VIP All-Access</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="member-locker">Locker #32</span>
+</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Hợp lệ
+          </span>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lần tập gần nhất: Hôm qua</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md active:scale-95 transition-all" onclick="triggerQuickCheckinId('SCMS-99215')">
+              Check-in
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all" onclick="openUpdateModal('SCMS-99215')">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+              Sửa
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden by default) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-lg text-center shadow-sm" id="noResultsState">
+<div class="w-12 h-12 rounded-full bg-surface-container text-outline mx-auto flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[24px]">person_search</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Không tìm thấy hội viên</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Vui lòng kiểm tra lại số điện thoại hoặc mã hội viên đã nhập.</p>
+<button class="mt-3 px-4 py-2 bg-surface-container text-primary rounded-lg font-label-md text-label-md" onclick="resetSearch()">
+        Xóa tìm kiếm
+      </button>
+</div>
+</div>
+<!-- Reception Notes & Special Requests Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">sticky_note_2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ghi chú &amp; Bàn giao ca trực</h2>
+</div>
+<button class="px-2.5 py-1 bg-surface-container text-primary rounded-lg font-label-md text-label-md flex items-center gap-1" onclick="openAddNoteModal()">
+<span class="material-symbols-outlined text-[16px]">add</span>
+        Thêm ghi chú
+      </button>
+</div>
+<div class="space-y-space-xs" id="notesContainer">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Locker #15 kẹt khóa từ, đã chuyển khách sang tủ phụ #18.</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Bởi REC-8802 • 07:15</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-error shrink-0">Cần sửa</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Khách VIP Nguyễn Văn Nam gửi bình giữ nhiệt tại quầy Bàn 02.</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Bởi REC-8802 • 06:45</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary shrink-0">Đang giữ</span>
+</div>
+</div>
+</div>
+<!-- Bottom Sheet / Modal: Update Member -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-end justify-center transition-opacity" id="updateModalOverlay">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl shadow-xl p-space-lg transform transition-transform translate-y-full max-h-[751px] overflow-y-auto no-scrollbar" id="updateModalSheet">
+<!-- Modal Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Cập nhật thông tin</span>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="modalMemberTitle">Chỉnh sửa Hội viên</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="closeUpdateModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Update Form -->
+<form class="mt-space-md space-y-space-md" id="memberUpdateForm" onsubmit="saveMemberChanges(event)">
+<input id="editMemberId" type="hidden"/>
+<!-- Full Name -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium">Họ và tên hội viên</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="editMemberName" required="" type="text"/>
+</div>
+<!-- Phone Number -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium">Số điện thoại liên hệ</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="editMemberPhone" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Locker Assignment -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium">Số Tủ Locker (#)</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="editMemberLocker" placeholder="VD: 18" type="text"/>
+</div>
+<!-- Status -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium">Trạng thái thẻ</label>
+<select class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="editMemberStatus">
+<option value="active">Hợp lệ (Active)</option>
+<option value="expiring">Sắp hết hạn</option>
+<option value="daypass">Vé ngày</option>
+<option value="suspended">Tạm khóa</option>
+</select>
+</div>
+</div>
+<!-- Plan Selection -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-medium">Gói hội viên đang sử dụng</label>
+<input class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="editMemberPlan" required="" type="text"/>
+</div>
+<!-- Action Buttons -->
+<div class="pt-space-sm flex items-center gap-space-xs">
+<button class="w-1/2 h-12 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onclick="closeUpdateModal()" type="button">
+            Hủy bỏ
+          </button>
+<button class="w-1/2 h-12 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+            Lưu thay đổi
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Modal: VietQR Invoice Checkout (Subtle, balanced preview) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-center justify-center p-gutter transition-opacity" id="vietQrModalOverlay">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl shadow-xl p-space-md space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">qr_code_2</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Thanh toán VietQR Quầy</h3>
+</div>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeVietQRModal()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Compact QR & Amount -->
+<div class="text-center space-y-space-xs bg-surface-container-low p-space-md rounded-xl">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tổng tiền giao dịch</p>
+<p class="font-display text-headline-lg text-primary font-bold">150.000 đ</p>
+<span class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">Nội dung: SCMS 88391 VE NGAY</span>
+<div class="w-44 h-44 mx-auto mt-2 bg-surface-container-lowest p-2 rounded-lg shadow-sm flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Mã QR code thanh toán VietQR ngân hàng tiêu chuẩn rõ nét và hiện đại trên nền trắng sạch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRjTeliLslRj81tXq4wYCtufyTsIxD8pnSfPZz17aXvEJweWl8MTaKTiqzxZagXip1LK70rS0eALjO1W3b28vmsiAwyD2_qvhyycX_DeVJIIxV1ht3W9KKrrpbLeIzzYQzihaTE44fukCA-YhbLxGbSC6H7_qRnvF6Felm2UbNv7jDcVV1dRNr2-Wh9p2zBYkqNGjsSAIPEpWpGmAt9aAPj075aZpKKflgi2A14SCFjs30Kx9rvVRR"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-1">Quét bằng ứng dụng ngân hàng bất kỳ để xác nhận tức thì</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-full h-11 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm" onclick="confirmPaymentSuccess()">
+          Xác nhận đã nhận tiền
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal: Add New Reception Note (Replaces primitive prompt) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-center justify-center p-gutter transition-opacity" id="addNoteModalOverlay">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl shadow-xl p-space-md space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">post_add</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Thêm Ghi Chú Ca Trực</h3>
+</div>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeAddNoteModal()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface">Nội dung ghi chú</label>
+<textarea class="w-full p-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="newNoteContent" placeholder="Nhập nội dung cần lưu ý hoặc bàn giao cho ca tiếp theo..." rows="3"></textarea>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface">Mức độ ưu tiên</label>
+<select class="w-full h-10 px-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none" id="newNotePriority">
+<option value="normal">Bình thường (Thông tin)</option>
+<option value="urgent">Quan trọng (Cần xử lý ngay)</option>
+<option value="hold">Đang giữ đồ khách</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-1">
+<button class="w-1/2 h-10 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md" onclick="closeAddNoteModal()">
+          Hủy
+        </button>
+<button class="w-1/2 h-10 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm" onclick="submitNewNote()">
+          Thêm ghi chú
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 font-label-md text-label-md transform -translate-y-6 opacity-0 pointer-events-none transition-all duration-300" id="toastNotification">
+<span class="material-symbols-outlined text-secondary text-[20px]" id="toastIcon">check_circle</span>
+<span id="toastMessage">Thao tác thành công!</span>
+</div>
+</div>
+<script>
+  // DOM Elements
+  const searchInput = document.getElementById('memberSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const memberCards = document.querySelectorAll('.member-card');
+  const noResults = document.getElementById('noResultsState');
+  const activeCountBadge = document.getElementById('activeCountBadge');
+
+  let currentFilter = 'all';
+
+  // Search Input Interaction
+  searchInput.addEventListener('input', (e) => {
+    const val = e.target.value.trim().toLowerCase();
+    clearBtn.classList.toggle('hidden', val.length === 0);
+    applyFilters();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    resetSearch();
+  });
+
+  function resetSearch() {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    applyFilters();
+    searchInput.focus();
+  }
+
+  // Filter Chips Handling
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      chip.classList.add('bg-primary', 'text-on-primary');
+
+      currentFilter = chip.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    memberCards.forEach(card => {
+      const name = card.getAttribute('data-name').toLowerCase();
+      const id = card.getAttribute('data-id').toLowerCase();
+      const phone = card.getAttribute('data-phone').toLowerCase();
+      const category = card.getAttribute('data-category') || '';
+
+      const matchesSearch = !query || name.includes(query) || id.includes(query) || phone.includes(query);
+      const matchesCategory = currentFilter === 'all' || category.includes(currentFilter);
+
+      if (matchesSearch && matchesCategory) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    noResults.classList.toggle('hidden', visibleCount > 0);
+    activeCountBadge.innerText = `${visibleCount} hội viên hiển thị`;
+  }
+
+  // Toast Functionality
+  function showToast(message, isError = false) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+
+    toastMsg.innerText = message;
+    if (isError) {
+      toastIcon.innerText = 'error';
+      toastIcon.className = 'material-symbols-outlined text-error text-[20px]';
+    } else {
+      toastIcon.innerText = 'check_circle';
+      toastIcon.className = 'material-symbols-outlined text-secondary text-[20px]';
+    }
+
+    toast.classList.remove('-translate-y-6', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('-translate-y-6', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+
+  // Update Member Modal
+  function openUpdateModal(memberId) {
+    const card = document.querySelector(`.member-card[data-id="${memberId}"]`);
+    if (!card) return;
+
+    document.getElementById('editMemberId').value = memberId;
+    document.getElementById('modalMemberTitle').innerText = 'Chỉnh sửa: ' + memberId;
+    document.getElementById('editMemberName').value = card.getAttribute('data-name');
+    document.getElementById('editMemberPhone').value = card.getAttribute('data-phone');
+    document.getElementById('editMemberLocker').value = card.getAttribute('data-locker');
+    document.getElementById('editMemberPlan').value = card.getAttribute('data-plan');
+    document.getElementById('editMemberStatus').value = card.getAttribute('data-status') || 'active';
+
+    const overlay = document.getElementById('updateModalOverlay');
+    const sheet = document.getElementById('updateModalSheet');
+
+    overlay.classList.remove('hidden');
+    overlay.classList.add('flex');
+    setTimeout(() => {
+      sheet.classList.remove('translate-y-full');
+      sheet.classList.add('translate-y-0');
+    }, 10);
+  }
+
+  function closeUpdateModal() {
+    const overlay = document.getElementById('updateModalOverlay');
+    const sheet = document.getElementById('updateModalSheet');
+
+    sheet.classList.remove('translate-y-0');
+    sheet.classList.add('translate-y-full');
+
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+    }, 250);
+  }
+
+  function saveMemberChanges(event) {
+    event.preventDefault();
+    const id = document.getElementById('editMemberId').value;
+    const newName = document.getElementById('editMemberName').value.trim();
+    const newPhone = document.getElementById('editMemberPhone').value.trim();
+    const newLocker = document.getElementById('editMemberLocker').value.trim();
+    const newPlan = document.getElementById('editMemberPlan').value.trim();
+    const newStatus = document.getElementById('editMemberStatus').value;
+
+    const card = document.querySelector(`.member-card[data-id="${id}"]`);
+    if (card) {
+      // Update data attributes
+      card.setAttribute('data-name', newName);
+      card.setAttribute('data-phone', newPhone);
+      card.setAttribute('data-locker', newLocker);
+      card.setAttribute('data-plan', newPlan);
+      card.setAttribute('data-status', newStatus);
+
+      // Update UI elements inside card
+      card.querySelector('.member-name').innerText = newName;
+      card.querySelector('.member-id').innerText = `Mã: ${id} • SĐT: ${newPhone}`;
+      card.querySelector('.member-plan').innerText = newPlan;
+      card.querySelector('.member-locker').innerText = `Locker #${newLocker}`;
+
+      closeUpdateModal();
+      showToast(`Đã cập nhật thông tin hội viên ${newName}`);
+    }
+  }
+
+  // Quick Action Triggers
+  function triggerQuickCheckin() {
+    showToast('Sẵn sàng quét thẻ hoặc nhập mã để Check-in!');
+    searchInput.focus();
+  }
+
+  function triggerQuickCheckinId(id) {
+    showToast(`Hội viên ${id} đã Check-in vào sàn thành công!`);
+  }
+
+  function quickCheckOut(id) {
+    showToast(`Đã thu hồi chìa khóa Locker & hoàn tất trả tủ thẻ ${id}`);
+  }
+
+  function quickRenew(id) {
+    openUpdateModal(id);
+    showToast('Vui lòng gia hạn số buổi tập hoặc gói mới');
+  }
+
+  function openNewMemberModal() {
+    showToast('Mở giao diện Đăng ký Hội viên cấp tốc');
+  }
+
+  function openRenewModal() {
+    showToast('Chọn hội viên bên dưới để gia hạn nhanh');
+  }
+
+  function openClassBookingModal() {
+    showToast('Mở bảng lịch phòng GX & Yoga hôm nay');
+  }
+
+  // VietQR Modal
+  function openVietQRModal() {
+    document.getElementById('vietQrModalOverlay').classList.remove('hidden');
+    document.getElementById('vietQrModalOverlay').classList.add('flex');
+  }
+
+  function closeVietQRModal() {
+    document.getElementById('vietQrModalOverlay').classList.add('hidden');
+    document.getElementById('vietQrModalOverlay').classList.remove('flex');
+  }
+
+  function confirmPaymentSuccess() {
+    closeVietQRModal();
+    showToast('Xác nhận nhận tiền thành công! Hóa đơn đã lưu vào ca.');
+  }
+
+  // Reception Note Modal
+  function openAddNoteModal() {
+    document.getElementById('addNoteModalOverlay').classList.remove('hidden');
+    document.getElementById('addNoteModalOverlay').classList.add('flex');
+    document.getElementById('newNoteContent').focus();
+  }
+
+  function closeAddNoteModal() {
+    document.getElementById('addNoteModalOverlay').classList.add('hidden');
+    document.getElementById('addNoteModalOverlay').classList.remove('flex');
+    document.getElementById('newNoteContent').value = '';
+  }
+
+  function submitNewNote() {
+    const text = document.getElementById('newNoteContent').value.trim();
+    const priority = document.getElementById('newNotePriority').value;
+    if (!text) {
+      showToast('Vui lòng nhập nội dung ghi chú!', true);
+      return;
+    }
+
+    const container = document.getElementById('notesContainer');
+    const noteEl = document.createElement('div');
+    noteEl.className = 'p-space-sm bg-surface-container-low rounded-lg flex items-start justify-between gap-2';
+
+    let priorityBadge = '<span class="font-label-sm text-label-sm text-primary shrink-0">Thông tin</span>';
+    let dotColor = 'bg-primary';
+
+    if (priority === 'urgent') {
+      priorityBadge = '<span class="font-label-sm text-label-sm text-error shrink-0">Cần xử lý</span>';
+      dotColor = 'bg-error';
+    } else if (priority === 'hold') {
+      priorityBadge = '<span class="font-label-sm text-label-sm text-secondary shrink-0">Đang giữ đồ</span>';
+      dotColor = 'bg-secondary';
+    }
+
+    noteEl.innerHTML = `
+      <div class="flex items-start gap-2">
+        <span class="w-1.5 h-1.5 rounded-full ${dotColor} mt-2 shrink-0"></span>
+        <div>
+          <p class="font-body-md text-body-md text-on-surface">${text}</p>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Bởi REC-8802 • Vừa xong</span>
+        </div>
+      </div>
+      ${priorityBadge}
+    `;
+
+    container.prepend(noteEl);
+    closeAddNoteModal();
+    showToast('Đã thêm ghi chú ca trực mới thành công');
+  }
+
+  // QR Scanner Trigger Sim
+  document.getElementById('openScannerBtn').addEventListener('click', () => {
+    showToast('Mở camera quét QR mã thẻ hoặc VietQR...');
+    setTimeout(() => {
+      showToast('Đã nhận diện mã thẻ SCMS-88391 (Nguyễn Văn Nam)');
+    }, 1500);
+  });
+
+  function sortMemberList() {
+    showToast('Đã sắp xếp danh sách theo thời gian check-in gần nhất');
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="grid grid-cols-4 h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-colors min-h-[44px]" data-path="tong-quan" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Tổng quan</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 transition-colors min-h-[44px] text-primary font-label-md" data-path="van-hanh-hoi-vien" href="#"><span class="material-symbols-outlined text-[24px]">sports_gymnastics</span><span class="font-label-sm text-label-sm">Vận hành</span></a><a class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-colors min-h-[44px]" data-path="tro-ly-ai" href="#"><span class="material-symbols-outlined text-[24px]">smart_toy</span><span class="font-label-sm text-label-sm">Trợ lý AI</span></a><a class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-colors min-h-[44px]" data-path="tai-khoan" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Tài khoản</span></a></div></nav></body></html>

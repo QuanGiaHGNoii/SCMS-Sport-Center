@@ -1,0 +1,6 @@
+{
+  "name": "SCMS Sports Center - Vận Hành & Lễ Tân Thể Thao",
+  "description": "Hệ thống quản lý, vận hành và lễ tân số 1 cho trung tâm thể thao SCMS Sports Pro: Check-in thông minh, quản lý hội viên, hóa đơn VietQR và trợ lý ca trực.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
